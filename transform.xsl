@@ -6,29 +6,44 @@
 <xsl:template match="/">
    <html>
    <body>
-   <h2>My CD Collection</h2>
-   <xsl:apply-templates/>
+      <math>
+         <xsl:apply-templates/>
+      </math>
    </body>
    </html>
 </xsl:template>
-
+<!-- 
 <xsl:template match="операнд">
-   <p>
    <xsl:apply-templates select="оператор"/>
    <xsl:apply-templates select="число"/>
-   </p>
-</xsl:template>
+</xsl:template> -->
 
 <xsl:template match="оператор">
-   оператор: <span style="color:#ff0000">
-   <xsl:value-of select="."/></span>
-   <br />
+   <mo>
+      <xsl:value-of select="."/>
+   </mo>
+</xsl:template>
+
+<xsl:template match="операнд">
+   <mi>
+      <xsl:value-of select="."/>
+   </mi>
 </xsl:template>
 
 <xsl:template match="число">
-   число: <span style="color:#00ff00">
-   <xsl:value-of select="."/></span>
-   <br />
+   <mn>
+      <xsl:value-of select="."/>
+   </mn>
+</xsl:template>
+
+<xsl:template match="строка">
+   <xsl:apply-templates select="."/>
+</xsl:template>
+
+<xsl:template match="Дробь">
+   <mfrac>
+      <xsl:apply-templates select="."/>
+   </mfrac>
 </xsl:template>
 
 </xsl:stylesheet> 
