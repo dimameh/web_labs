@@ -4,11 +4,10 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
-   <html xmlns="http://www.w3.org/1999/xhtml">
+   <html>
    <head>
-      <title>XHTML+MathML Example</title>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <title>Lab 1 - Mekh</title>
+      <script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-svg.js"/>
    </head>
    <body>
       <math xmlns="http://www.w3.org/1998/Math/MathML">

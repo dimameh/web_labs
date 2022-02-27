@@ -1,76 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
-   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
-   <html xmlns="http://www.w3.org/1999/xhtml">
-   <head>
-      <title>XHTML+MathML Example</title>
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-   </head>
-   <body>
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-         <xsl:apply-templates/>
-      </math>
-   </body>
-   </html>
+	<html>
+	<head>
+		<title>Lab 2 - Mekh</title>
+		<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-svg.js"/>
+	</head>
+	<body>
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<xsl:apply-templates/>
+		</math>
+	</body>
+	</html>
 </xsl:template>
 
-<xsl:template match="оператор">
-   <mo>
-      <xsl:value-of select="."/>
-   </mo>
+<xsl:template match="графика">
+	<svg>
+		<xsl:attribute name="width">
+				<xsl:value-of select="@ширина"/>
+		</xsl:attribute>
+
+		<xsl:attribute name="height">
+				<xsl:value-of select="@высота"/>
+		</xsl:attribute>
+		<xsl:apply-templates/>
+	</svg>
 </xsl:template>
 
-<xsl:template match="операнд">
-   <mi>
-      <xsl:value-of select="."/>
-   </mi>
-</xsl:template>
 
-<xsl:template match="число">
-   <mn>
-      <xsl:value-of select="."/>
-   </mn>
-</xsl:template>
+<xsl:template match="эллипс">
+	<ellipse>
+		<xsl:attribute name="cx">
+				<xsl:value-of select="@cx"/>
+		</xsl:attribute>
 
-<xsl:template match="строка">
-   <mrow>
-      <xsl:apply-templates/>
-   </mrow>
-   
-</xsl:template>
+		<xsl:attribute name="cy">
+				<xsl:value-of select="@cy"/>
+		</xsl:attribute>
 
-<xsl:template match="дробь">
-   <mfrac>
-      <xsl:apply-templates/>
-   </mfrac>
-</xsl:template>
+		<xsl:attribute name="rx">
+				<xsl:value-of select="@rx"/>
+		</xsl:attribute>
 
-<xsl:template match="низверх">
-   <munderover>
-      <xsl:apply-templates/>
-   </munderover>
-</xsl:template>
+		<xsl:attribute name="ry">
+				<xsl:value-of select="@ry"/>
+		</xsl:attribute>
 
-<xsl:template match="верх">
-   <msup>
-      <xsl:apply-templates/>
-   </msup>
-</xsl:template>
+		<xsl:attribute name="style">fill:<xsl:value-of select="@заливка"/>;stroke:<xsl:value-of select="@ободок"/>;stroke-width:<xsl:value-of select="@ширина-ободка"/>;</xsl:attribute>
 
-<xsl:template match="низ">
-   <msub>
-      <xsl:apply-templates/>
-   </msub>
-</xsl:template>
-
-<xsl:template match="корень">
-   <msqrt>
-      <xsl:apply-templates/>
-   </msqrt>
+		<xsl:apply-templates/>
+	</ellipse>
 </xsl:template>
 
 </xsl:stylesheet> 
