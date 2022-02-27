@@ -4,7 +4,12 @@
    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
-   <html>
+   <?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+   <html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>XHTML+MathML Example</title>
+   </head>
    <body>
       <math xmlns="http://www.w3.org/1998/Math/MathML">
          <xsl:apply-templates/>
