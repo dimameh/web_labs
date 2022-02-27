@@ -7,7 +7,8 @@
    <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <title>XHTML+MathML Example</title>
-      <script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
    </head>
    <body>
       <math xmlns="http://www.w3.org/1998/Math/MathML">
