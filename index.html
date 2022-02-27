@@ -4,12 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <title>Labs</title>
+  <style type="text/css">
+    a { 
+      font-size: 120%; 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3px 24px;
+      margin-right: 5px;
+
+      width: 160px;
+      height: 30px;
+
+      background: #746FFF;
+      transition: background 0.02s cubic-bezier(0.23, 1.05, 0.58, 1);
+      border-radius: 2px;
+      color: #FDFDFD;
+
+      cursor: pointer;
+    }
+
+    a:hover {
+      background: #645eff;
+    }
+
+    .wr {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100vw;
+    }
+   </style>
 </head>
 <body>
-  <h1>Mekh D. A. labs</h1>
-  <a href="lab1.xml">Lab 1</a>
-  <a href="lab2.xml">Lab 2</a>
+  <div class="wr">
+    <h1>Mekh D.A. labs</h1>
+    <div style="display: flex; flex-direction: row;">
+      <a href="lab1.xml">Lab 1</a>
+      <a href="lab2.xml">Lab 2</a>
+    </div>
+  </div>
 </body>
 </html>
