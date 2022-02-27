@@ -7,7 +7,6 @@
    <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <title>XHTML+MathML Example</title>
-      <link rel="shortcut icon" href="#">
       <script src="http://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
    </head>
    <body>
