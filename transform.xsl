@@ -37,14 +37,9 @@
 </xsl:template>
 
 <xsl:template match="строка">
-   <xsl:if test="count(*) > 1">
-      <mrow>
-         <xsl:apply-templates/>
-      </mrow>
-   </xsl:if>
-   <xsl:if test="count(*) = 1">
+   <mrow>
       <xsl:apply-templates/>
-   </xsl:if>
+   </mrow>
    
 </xsl:template>
 
@@ -64,6 +59,12 @@
    <msup>
       <xsl:apply-templates/>
    </msup>
+</xsl:template>
+
+<xsl:template match="низ">
+   <msub>
+      <xsl:apply-templates/>
+   </msub>
 </xsl:template>
 
 <xsl:template match="корень">
