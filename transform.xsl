@@ -12,11 +12,6 @@
    </body>
    </html>
 </xsl:template>
-<!-- 
-<xsl:template match="операнд">
-   <xsl:apply-templates select="оператор"/>
-   <xsl:apply-templates select="число"/>
-</xsl:template> -->
 
 <xsl:template match="оператор">
    <mo>
