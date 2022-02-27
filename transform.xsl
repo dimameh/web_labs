@@ -37,13 +37,39 @@
 </xsl:template>
 
 <xsl:template match="строка">
-   <xsl:apply-templates select="."/>
+   <xsl:if test="count(*) > 1">
+      <mrow>
+         <xsl:apply-templates/>
+      </mrow>
+   </xsl:if>
+   <xsl:if test="count(*) = 1">
+      <xsl:apply-templates/>
+   </xsl:if>
+   
 </xsl:template>
 
-<xsl:template match="Дробь">
+<xsl:template match="дробь">
    <mfrac>
-      <xsl:apply-templates select="."/>
+      <xsl:apply-templates/>
    </mfrac>
+</xsl:template>
+
+<xsl:template match="низверх">
+   <munderover>
+      <xsl:apply-templates/>
+   </munderover>
+</xsl:template>
+
+<xsl:template match="верх">
+   <msup>
+      <xsl:apply-templates/>
+   </msup>
+</xsl:template>
+
+<xsl:template match="корень">
+   <msqrt>
+      <xsl:apply-templates/>
+   </msqrt>
 </xsl:template>
 
 </xsl:stylesheet> 
