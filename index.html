@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Labs</title>
   <style type="text/css">
+    * {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+    }
     a { 
       font-size: 120%; 
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
       font-style: normal;
       font-weight: 500;
       line-height: 24px;
@@ -17,7 +20,8 @@
       justify-content: center;
       align-items: center;
       padding: 3px 24px;
-      margin-right: 5px;
+      margin-right: 10px;
+      margin-top: 10px;
 
       width: 160px;
       height: 30px;
@@ -31,26 +35,73 @@
       text-decoration: none;
     }
 
+    a:last-child {
+      margin-right: 0;
+    }
+
     a:hover {
       background: #645eff;
     }
 
-    .wr {
+    .container {
+      display: flex; 
+      flex-direction: column;
+      align-items: center;
+    }
+    .card {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+
       align-items: center;
 
-      width: 100vw;
+      width: 800px;
+      margin-bottom: 10px;
+
+      background-color: #f3f6fa;
+      border: solid 1px #dce6f0;
+      border-radius: 0.3rem;
+      padding: 0.8rem;
+    }
+    .lab_title {
+      font-size: 120%; 
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    .sources {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
     }
    </style>
 </head>
 <body>
-  <div class="wr">
-    <h1>Mekh D.A. labs</h1>
-    <div style="display: flex; flex-direction: row;">
-      <a href="lab1.xml">Lab 1</a>
-      <a href="lab2.xml">Lab 2</a>
+  <h4 id="author" title="DmitriyMekh">Дмитрий Мех</h4>
+  <div class="container">
+    <div class="card">
+      <div class="lab_title">MathML</div>
+      <div class="sources">
+        <a href="http://kodaktor.ru/sigma.pdf">Задание</a>
+        <a href="lab1.xml">Code</a>
+        <a href="MathML/lab1.xml">Demo</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="lab_title">SVG</div>
+      <div class="sources">
+        <a href="http://kodaktor.ru/svg.pdf">Задание</a>
+        <a href="lab1.xml">Code</a>
+        <a href="SVG/lab2.xml">Demo</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="lab_title">Вычисление корней системы</div>
+      <div class="sources">
+        <a href="https://node-server.online/m/mod/scorm/view.php?id=800">Задание</a>
+        <a href="lab1.xml">Code</a>
+        <a href="roots.html">Demo</a>
+     </div>
     </div>
   </div>
 </body>
