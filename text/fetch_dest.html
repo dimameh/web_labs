@@ -1,0 +1,8 @@
+<code style="white-space: pre-wrap;">
+  fetch('https://kodaktor.ru/j/users')
+      .then(res => res.json())
+      .then(({users}) => users)
+      .then(({ 3: res }) => res)
+      .then(({ login }) => login)
+      .then(console.log)
+</code>

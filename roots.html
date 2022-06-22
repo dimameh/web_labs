@@ -10,10 +10,14 @@
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
     }
     
-    .inputs{
+    .inputs input {
       display: flex;
       flex-direction: column;
       width: 150px;
+    }
+
+    .inputs div {
+      margin-right: 10px;
     }
 
     .inputs > div > input {
@@ -41,12 +45,16 @@
   <div class="inputs">
     <div class="уравнение">
       <input type="number" value = "" id="n1">
+      <div> X + </div>
       <input type="number" value = "" id="n2">
+      <div> Y = </div>
       <input type="number" value = "" id="n3">
     </div>
     <div class="уравнение">
       <input type="number" value = "" id="n4">
+      <div> X + </div>
       <input type="number" value = "" id="n5">
+      <div> Y = </div>
       <input type="number" value = "" id="n6">
     </div>
   </div>
